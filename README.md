@@ -8,7 +8,7 @@ Run Docker commands from repo root
 
 ## Run (development):
 
-`docker run -d --name nginx -p 80:80 --restart=always ghcr.io/harness-iot/nginx:[version]|latest`
+`docker run -d --name nginx -p 80:80 -p 1883:1883 --restart=always ghcr.io/harness-iot/nginx:[version]|latest`
 
 ## Push:
 
