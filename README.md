@@ -2,13 +2,13 @@
 
 Run Docker commands from repo root
 
+## Run (development):
+Note: use the `docker-compose.yml` file for local development only as it will set the `network_mode` to `"host"` so NGINX can point to localhost outside the container. <br/>
+In repo root, run `docker-compose up -d`
+
 ## Build:
 
 `docker build -t ghcr.io/harness-iot/nginx:[version] -t ghcr.io/harness-iot/nginx:latest .`
-
-## Run (development):
-
-`docker run -d --name nginx -p 80:80 -p 1883:1883 --restart=always ghcr.io/harness-iot/nginx:[version]|latest`
 
 ## Push:
 

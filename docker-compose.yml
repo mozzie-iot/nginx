@@ -1,0 +1,11 @@
+# Use for repo testing/dev only
+version: "3.9"
+services:
+  nginx:
+    container_name: huebot_nginx
+    image: nginx:test
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    restart: unless-stopped
+    network_mode: "host"
