@@ -1,10 +1,11 @@
-# Harness NGINX
+# Huebot NGINX
 
 Run Docker commands from repo root
 
+Note: it's worth setting `network_mode` to `"host"` so that other services (hub-core, mqtt) can be referenced via localhost. Otherwise, you'd need to refernce them by container name and if that service is down then the NGINX service will not start
+
 ## Run (development):
-Note: use the `docker-compose.yml` file for local development only as it will set the `network_mode` to `"host"` so NGINX can point to localhost outside the container. <br/>
-In repo root, run `docker-compose up -d`
+`docker-compose up -d`
 
 ## Build:
 
