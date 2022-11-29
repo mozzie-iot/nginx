@@ -9,12 +9,12 @@ Note: it's worth setting `network_mode` to `"host"` so that other services (hub-
 
 ## Build:
 
-`docker build -t ghcr.io/harness-iot/nginx:[version] -t ghcr.io/harness-iot/nginx:latest .`
+`docker build -t ghcr.io/huebot-iot/nginx:[version] -t ghcr.io/huebot-iot/nginx:latest .`
 
 ## Push:
 
-1. `docker push ghcr.io/harness-iot/nginx:[version]`
-2. `docker push ghcr.io/harness-iot/nginx:latest` (just tags as 'latest')
+1. `docker push ghcr.io/huebot-iot/nginx:[version]`
+2. `docker push ghcr.io/huebot-iot/nginx:latest` (just tags as 'latest')
 
 ## Notes
 
