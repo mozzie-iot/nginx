@@ -1,4 +1,5 @@
 FROM nginx:alpine
+LABEL org.opencontainers.image.source https://github.com/huebot-iot/hub-nginx
 
 RUN rm /etc/nginx/nginx.conf
 COPY ./nginx.conf /etc/nginx/
