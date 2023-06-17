@@ -2,10 +2,18 @@
 version: "3.9"
 services:
   nginx:
-    container_name: huebot_nginx
+    container_name: huebot_dev_nginx
     image: nginx:test
     build:
       context: .
       dockerfile: Dockerfile
+    restart: unless-stopped
+    network_mode: "host"
+  nginx_nextjs:
+    container_name: huebot_dev_nginx
+    image: nginx:test
+    build:
+      context: .
+      dockerfile: nextjs.Dockerfile
     restart: unless-stopped
     network_mode: "host"
